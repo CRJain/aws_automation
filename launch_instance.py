@@ -1,6 +1,8 @@
 # install requirements
 print("Installing requirements ...")
+os.system('sudo apt-get install python-pyaudio python3-pyaudio')
 os.system('pip3 install -r requirements.txt')
+os.system('sudo apt-get install gnustep-gui-runtime')
 
 import time
 import speech_recognition as sr
