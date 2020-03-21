@@ -1,6 +1,6 @@
 # install requirements
 print("Installing requirements ...")
-os.system('sudo apt-get install python-pyaudio python3-pyaudio; pip3 install -r requirements.txt')
+os.system('pip3 install -r requirements.txt')
 
 import time
 import speech_recognition as sr
