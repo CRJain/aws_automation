@@ -1,3 +1,5 @@
+import os
+
 # install requirements
 print("Installing requirements ...")
 os.system('sudo apt-get install python-pyaudio python3-pyaudio')
@@ -7,7 +9,6 @@ os.system('sudo apt-get install gnustep-gui-runtime')
 import time
 import speech_recognition as sr
 import boto3
-import os
 
 
 def create_aws_instance(resource_name='ec2', img_id='ami-0520e698dd500b1d1', instance_type='t2.micro'):
