@@ -1,3 +1,7 @@
+# install requirements
+print("Installing requirements ...")
+os.system('pip3 install -r requirements.txt')
+
 import time
 import speech_recognition as sr
 import boto3
@@ -70,9 +74,7 @@ def recognize_speech_from_mic(recognizer, microphone):
 
 
 if __name__ == "__main__":
-    # install requirements
-    print("Installing requirements ...")
-    os.system('pip3 install -r requirements.txt')
+
     # set the dict of AMIs and prompt limit
     AMIS = {
         'AMAZON' : 'ami-0998bf58313ab53da',
@@ -116,9 +118,6 @@ if __name__ == "__main__":
         if command["error"]:
             print("ERROR: {}".format(command["error"]))
             exit(0)
-
-        # show the user the transcription
-        # print("\nYou said: {}".format(command["transcription"]))
 
         command_words = list(map(lambda x: x.lower(), command['transcription'].split()))
 
